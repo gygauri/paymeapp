@@ -1,0 +1,167 @@
+.profileContainer{
+    display : grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.selected{
+    background-color: #0047AB !important;
+}
+
+.menulabel{
+   padding-top: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .paymentChannelGrid{
+        padding-left: 5%;
+    }
+    .myProfile {
+        padding: 7%;
+        color: #145DA0;
+    }
+    .detailitem {
+        width: 90%;
+        padding-bottom: 5%;
+        padding-left: 4%;
+    }
+    .workEx{
+        width: 80%;
+        padding-bottom: 5%;
+        padding-left: 4%;
+    }
+    .wrapChip{
+        flex-wrap: wrap;
+        gap:4px;
+    }
+    .channels{
+        padding: 1%;
+        color:#145DA0;
+        font-size: 14px;
+        padding-left: 4%;
+    }
+    .menu{
+        background-color: #145DA0;
+        height: 125vh;
+    }
+    .update{
+        padding-top: 3%;
+        padding-left: 4%;
+        padding-bottom: 6%;
+    }
+    .addprofileImage{
+        width:119px;
+    }
+    .uploadImg{
+        padding-top: 2%;
+        padding-left: 5%;
+    }
+    .profileImage{
+        width: 80%;
+    }
+    .addNewContainer{
+        padding-left: 5%;
+    }
+    .menuitem{
+        height: 5%;
+        border-bottom: 2px solid #1976d2;
+        color: white;
+        padding-left: 8%;
+        padding-top: 8%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        cursor: pointer;
+    }
+    
+    .menuitem:hover{
+        height: 5%;
+        border-bottom: 2px solid #1976d2;
+        color: white;
+        padding-left: 19%;
+        padding-top: 8%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        cursor: pointer;
+        background-color: #0047AB !important;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .detailGrid{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .myProfile{
+        padding: 15%;
+        color:#145DA0;
+        padding-bottom: 0%;
+    }
+    .detailitem{
+        width:80%;
+        padding-bottom: 2%;
+    }
+    .detailsGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .channels{
+        padding: 1%;
+        color:#145DA0;
+        font-size: 14px;
+        padding-left: 0%;
+    }
+    .menu{
+        background-color: #145DA0;
+        height: 86vh;
+    }
+    .update{
+        padding-top: 3%;
+    }
+    .addNewContainer{
+        text-align: center;
+    }
+    .addprofileImage{
+        width:166px;
+    }
+    .uploadImg{
+        padding-top: 2%;
+    }
+    .profileImage{
+        width: 300px;
+        height: 215px;
+    }
+    .menuitem{
+        height: 5%;
+        border-bottom: 2px solid #1976d2;
+        color: white;
+        padding-left: 19%;
+        padding-top: 8%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        cursor: pointer;
+    }
+    
+    .menuitem:hover{
+        height: 5%;
+        border-bottom: 2px solid #1976d2;
+        color: white;
+        padding-left: 19%;
+        padding-top: 8%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        cursor: pointer;
+        background-color: #0047AB !important;
+    }
+  }
+
+.profileDetails{
+    padding-top: 8%;
+}
+
+.image{
+    padding-left: 16%;
+}
+
+.addProfileContainer{
+    padding-right: 34%;
+}

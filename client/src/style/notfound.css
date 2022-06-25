@@ -1,0 +1,57 @@
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .fournotfour{
+        top: 23%;
+        left: 8%;
+        position: absolute;
+    }
+    .oops{
+        text-align: center;
+        font-size: 34px;
+        padding-top: 9%;
+        color : #145DA0;
+        font-weight: 600;
+    }
+    .pagenotfound{
+        text-align: center;
+        padding-top: 1%;
+        color : grey;
+    }
+    .goback{
+        text-align: center;
+        padding-top: 97%;
+    }
+    .img{
+        width:341px;
+        height:218px;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .fournotfour{
+        top: 23%;
+        left: 35%;
+        position: absolute;
+    }
+    .oops{
+        text-align: center;
+        font-size: 34px;
+        padding-top: 3%;
+        color : #145DA0;
+        font-weight: 600;
+    }
+    .pagenotfound{
+        text-align: center;
+        padding-top: 1%;
+        color : grey;
+    }
+    .goback{
+        text-align: center;
+        padding-top: 28%;
+    }
+    .img{
+        width : 490px; 
+        height : 300px;
+    }
+  }

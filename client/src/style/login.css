@@ -1,0 +1,74 @@
+.background{
+    background-image: url('../images/abstract-background-with-low-poly-design.jpg');
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    background-position: center center;
+    height: 82vh;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .box{
+        opacity: 0.8;
+        top: 23%;
+        left: 6%;
+        position: absolute;
+        width: 88%;
+    }
+    .loginBtn{
+        justify-content: center;
+        margin-left: 27%;
+        margin-top: 6%
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .box{
+        opacity:0.8;
+        width:30%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin:auto;
+        position: absolute;
+    }
+    .loginBtn{
+        justify-content: center;
+        margin-left: 27%;
+        margin-top: 2%
+    }
+  }
+
+.loginTitle{
+    color : #145DA0;
+}
+.alignCenter{
+    text-align: center;
+}
+
+.password{
+    margin-top: 5%;
+}
+
+.signup{
+    height: 30px;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 2%;
+}
+
+.titleGrid{
+    display:flex;
+    flex-wrap: unset;
+    justify-content: center;
+}
+
+.error{
+    color: #d32f2f;
+    font-size: 12px;
+    padding-left: 4%;
+    padding-top: 1%;
+}
+.fgtPwd{
+    float:right;
+}

@@ -1,0 +1,62 @@
+/***Footer CSS *****/
+.footerGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:10px;
+}
+
+.padding{
+    padding-bottom: 3%;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footeritem{
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.footerNav{
+    height : 20%;
+}
+
+.footerAlign{
+    padding : 2%;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .footerContainer{
+        display: grid;
+        }
+  }
+  @media only screen and (min-width: 768px) {
+    .footerContainer{
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        }
+  }
+
+.aboutpayme{
+    font-size: 16px;
+    font-weight: 600;
+    padding-top:10%;
+}
+
+.paymefootrlogogrid{
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-gap:10px;
+}
+
+.socialgrid{
+    padding-top:4%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 3%
+}
+.icon{
+    cursor: pointer;
+}
