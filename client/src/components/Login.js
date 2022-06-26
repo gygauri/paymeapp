@@ -109,8 +109,7 @@ export default function Login() {
     const onPressEnter = (e) => {
         if (e.key === 'Enter') {
             if (!(email.trim() === '' || password.trim() === '' || passwordError || emailError)) {
-                localStorage.setItem('loggedIn', true)
-                navigate('/userprofile',{ state: { email : email } });
+                logUserIn();
             }
         }
     }
@@ -137,6 +136,7 @@ export default function Login() {
                                     <TextField
                                         fullWidth
                                         required
+                                        data-testid='email'
                                         error={emailError}
                                         label="Email"
                                         value={email}
@@ -152,6 +152,7 @@ export default function Login() {
                                         <OutlinedInput
                                             type={showPassword ? 'text' : 'password'}
                                             value={password}
+                                            data-testid='password'
                                             error={passwordError}
                                             onChange={(e) => passwordUpdate(e)}
                                             onKeyPress={(e) => onPressEnter(e)}
@@ -159,6 +160,7 @@ export default function Login() {
                                             endAdornment={
                                                 <InputAdornment position="end">
                                                     <IconButton
+                                                        data-testid='togglePwd'
                                                         onClick={togglePassword}
                                                         edge="end"
                                                     >
@@ -178,6 +180,7 @@ export default function Login() {
                             <LoadingButton
                                 style={{ "minHeight": "40px", width: "60%" }}
                                 size="small"
+                                data-testid='loginbtn'
                                 disabled={email.trim() === '' || password.trim() === '' || passwordError || emailError}
                                 onClick={() => logUserIn()}
                                 endIcon={<SendIcon />}

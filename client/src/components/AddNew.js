@@ -15,7 +15,7 @@ export default function AddNew() {
             {file ?
                 <img className="profileImage" src={file ? URL.createObjectURL(file) : null} alt={file ? file.name : null} /> :
                 <div className="addProfileContainer"><img src={addProfile} className="addprofileImage" alt="sitelogo" /></div>}
-            <div className="uploadImg"><input type="file" onChange={fileHandler} /></div>
+            <div className="uploadImg"><input  data-testid='fileupload' type="file" onChange={fileHandler} /></div>
         </div>
     )
 }

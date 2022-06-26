@@ -34,7 +34,7 @@ export default function UserProfile() {
     const [emailAdd, setEmailAdd] = useState('')
     const [workEx , setWorkEx] = useState(0);
     const [enableNotification , setEnableNotification] = useState(false)
-    const [paymentOptions, setPaymentOptions] = useState([])
+    const [paymentOptions, setPaymentOptions] = useState([{'id' : 0 , 'selected' : true , 'name' : 'None'}])
     const navigate = useNavigate(); //Creating Navigation Object
     const {state} = useLocation();
     const [menuItems , setMenuItems] = useState([{id:1,name :'My Profile',selected:true},{id:2,name : 'Programs'},{id:3,name :'Billing'},{id:4,name :'Orders'}]);
@@ -100,6 +100,7 @@ export default function UserProfile() {
                     return (
                         <div className={menuItem.selected ? "menuitem selected" : "menuitem"} 
                         key={'menu_'+menuItem.id}
+                        data-testid='selectmenuItem'
                         onClick={() => selectMenuItem(menuItem)}>
                         <div>{menuItem.name}</div>
                         <div><ChevronRightIcon className="arrow" /></div>
@@ -118,6 +119,7 @@ export default function UserProfile() {
                         <div className="detailitem">
                             <TextField
                                 fullWidth
+                                data-testid='firstName'
                                 label="First Name"
                                 value={firstName || ''}
                                 onChange={(e) => setFirstName(e.target.value)}
@@ -126,6 +128,7 @@ export default function UserProfile() {
                         <div className="detailitem">
                             <TextField
                                 fullWidth
+                                data-testid='lastName'
                                 label="Last Name"
                                 value={lastName || ''}
                                 onChange={(e) => setLastName(e.target.value)}
@@ -134,6 +137,7 @@ export default function UserProfile() {
                         <div className="detailitem">
                             <TextField
                                 fullWidth
+                                data-testid='currentorg'
                                 label="Current Organisation"
                                 value={currentOrg || ''}
                                 onChange={(e) => setCurrentOrg(e.target.value)}
@@ -143,6 +147,7 @@ export default function UserProfile() {
                             <TextField
                                 fullWidth
                                 disabled
+                                data-testid='emailadd'
                                 label="Email Address"
                                 value={emailAdd || ''}
                                 onChange={(e) => setEmailAdd(e.target.value)}
@@ -153,6 +158,10 @@ export default function UserProfile() {
                                 <FormControl fullWidth>
                                     <InputLabel >Work Experience</InputLabel>
                                     <Select
+                                        data-testid='workex'
+                                        inputProps={{
+                                            "data-testid": "workEx"
+                                          }}
                                         value={workEx}
                                         onChange={(e) => setWorkEx(e.target.value)}
                                         label="Work Experience"
@@ -167,6 +176,7 @@ export default function UserProfile() {
                             <div className="workEx">
                                 <FormGroup>
                                     <FormControlLabel control={<Switch 
+                                     data-testid='enableNotif'
                                     onChange={(e) => setEnableNotification(e.target.checked)}
                                     checked={enableNotification} />} label='Enable Notifications' />
                                 </FormGroup>
@@ -180,6 +190,7 @@ export default function UserProfile() {
                             paymentOptions.map(paymentOption => {
                                 return (
                                     <Chip color="primary" label={paymentOption.name} variant={paymentOption.selected ? '' : 'outlined'}
+                                    data-testid='paymentoption'
                                     key={'menu_'+paymentOption.id}
                                     onClick={() =>updatePayments(paymentOption)} />
                                 )

@@ -112,10 +112,11 @@
     }
     .menu{
         background-color: #145DA0;
-        height: 86vh;
+        height: 100vh;
     }
     .update{
         padding-top: 3%;
+        padding-bottom:2%;
     }
     .addNewContainer{
         text-align: center;

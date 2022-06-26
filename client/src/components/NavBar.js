@@ -43,6 +43,7 @@ export default function NavBar(props) {
                             size="large"
                             onClick={(e) => handleClick(e)}
                             color="inherit"
+                            data-testid='accountcircle'
                         >
                             <AccountCircle />
                         </IconButton>}
@@ -61,6 +62,7 @@ export default function NavBar(props) {
                             open={Boolean(anchorEl)}
                         >
                             <MenuItem
+                                data-testid='logout'
                                 onClick={() => logoutUser()}
                             >Logout</MenuItem>
                         </Menu>
